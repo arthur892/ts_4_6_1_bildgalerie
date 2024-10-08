@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ts_4_6_1_bildgalerie/screens/gallery.dart';
-import 'package:ts_4_6_1_bildgalerie/screens/profile.dart';
+import 'package:ts_4_6_1_bildgalerie/gallery/screens/gallery.dart';
+import 'package:ts_4_6_1_bildgalerie/profile/screens/profile.dart';
 
 void main() {
   runApp(const MainApp());
