@@ -40,6 +40,9 @@ class _MainAppState extends State<MainApp> {
           selectedIndex: _selectedIndex,
         ),
         body: _widgets[_selectedIndex],
+        appBar: AppBar(
+          title: Text("AppBar"),
+        ),
       ),
     );
   }
