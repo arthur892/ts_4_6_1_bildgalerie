@@ -14,7 +14,7 @@ class GalleryScreen extends StatefulWidget {
 }
 
 class _GalleryScreenState extends State<GalleryScreen> {
-  bool isListView = true;
+  bool showListView = false;
   @override
   Widget build(BuildContext context) {
     final List<GalleryItem> galleryItems =
@@ -55,10 +55,10 @@ class _GalleryScreenState extends State<GalleryScreen> {
       floatingActionButton: IconButton(
         onPressed: () {
           setState(() {
-            isListView = !isListView;
+            showListView = !showListView;
           });
         },
-        icon: Icon(isListView ? Icons.grid_view : Icons.list),
+        icon: Icon(showListView ? Icons.grid_view : Icons.list),
         color: Colors.white,
       ),
       body: Center(
@@ -72,7 +72,7 @@ class _GalleryScreenState extends State<GalleryScreen> {
                 Colors.teal,
               ],
             )),
-            child: isListView
+            child: showListView
                 ? buildListView(galleryItems)
                 : buildGridView(galleryItems)),
       ),
