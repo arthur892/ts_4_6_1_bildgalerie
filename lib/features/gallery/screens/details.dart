@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ts_4_6_1_bildgalerie/features/gallery/models/gallery_item.dart';
+import 'package:ts_4_6_1_bildgalerie/shared/widgets/textboxes.dart';
 
 class Details extends StatelessWidget {
   final GalleryItem galleryItem;
@@ -19,7 +20,6 @@ class Details extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: Text(galleryItem.imageTitle),
@@ -61,15 +61,45 @@ class Details extends StatelessWidget {
                       }),
                     ),
                   ),
-                  const SizedBox(
-                    height: 12,
+                  const Divider(),
+                  SizedBox(
+                    height: 40,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        Container(
+                          height: 50,
+                          child: TextRounded(text: galleryItem.imageDate),
+                        ),
+                        Container(
+                          height: 50,
+                          child: TextRounded(text: galleryItem.imageLocation),
+                        ),
+                        Container(
+                          height: 50,
+                          child: TextRounded(text: galleryItem.resolution),
+                        ),
+                        Container(
+                          height: 50,
+                          child: TextRounded(text: galleryItem.fileSize),
+                        ),
+                      ],
+                    ),
+                    // child: Row(
+                    //   children: [
+                    //     TextRounded(text: galleryItem.imageDate),
+                    //     TextRounded(text: galleryItem.imageLocation),
+                    //     TextRounded(text: galleryItem.resolution),
+                    //     TextRounded(text: galleryItem.fileSize),
+                    //   ],
+                    // ),
                   ),
-                  Container(
-                      color: Colors.blue[100],
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(galleryItem.imageDescription),
-                      )),
+                  const Divider(),
+                  TextRounded(
+                    text: galleryItem.imageDescription,
+                    color: Colors.blue[100]!,
+                    textColor: Colors.black,
+                  ),
                 ],
               ),
             )

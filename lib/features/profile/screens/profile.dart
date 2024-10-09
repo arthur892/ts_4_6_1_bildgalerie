@@ -1,42 +1,48 @@
 import 'package:flutter/material.dart';
+import 'package:ts_4_6_1_bildgalerie/features/profile/data/profile_repo.dart';
+import 'package:ts_4_6_1_bildgalerie/shared/widgets/textboxes.dart';
+//import 'package:ts_4_6_1_bildgalerie/features/profile/models/profile_item.dart';
 
 class Profile extends StatelessWidget {
-  const Profile({super.key});
+  final ProfileRepo profileRepo;
+  Profile({super.key, required this.profileRepo});
 
   @override
   Widget build(BuildContext context) {
+    final profileItem = profileRepo.getProfileItem();
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Center(
         child: Column(
           children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(50),
-              child: Container(
-                height: 100,
-                width: 100,
-                color: Colors.red,
-              ),
+            Container(
+              height: 150,
+              width: 150,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(50),
+                  image: DecorationImage(
+                      image: AssetImage(profileItem.profileImagePath),
+                      fit: BoxFit.cover)),
             ),
             const SizedBox(
               height: 8,
             ),
-            const Text(
-              "Name",
-              style: TextStyle(fontSize: 20),
+            Text(
+              profileItem.profileName,
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
             const SizedBox(
               height: 4,
             ),
-            const Text(
-              "Jobtitle",
-              style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
-            ),
+            Text(profileItem.profileJob,
+                style: TextStyle(fontWeight: FontWeight.bold)),
             const SizedBox(
               height: 16,
             ),
-            const Row(
-              children: [Text("Beschreibung")],
+            Expanded(
+              child: SingleChildScrollView(
+                child: TextRounded(text: profileItem.profileDescription),
+              ),
             ),
           ],
         ),
