@@ -20,65 +20,66 @@ class _GalleryScreenState extends State<GalleryScreen> {
     final List<GalleryItem> galleryItems =
         widget.galleryRepo.getAllGalleryItems();
 
-    // return Column(
-    //   children: [
-    //     Row(
-    //       mainAxisAlignment: MainAxisAlignment.end,
-    //       children: [
-    //         IconButton(
-    //             onPressed: () {
-    //               setState(() {
-    //                 isListView = !isListView;
-    //               });
-    //             },
-    //             icon: Icon(isListView ? Icons.grid_view : Icons.list))
-    //       ],
-    //     ),
-    //     Expanded(
-    //         child: isListView
-    //             ? buildListView(galleryItems)
-    //             : buildGridView(galleryItems))
-    //   ],
-    // );
-    return Scaffold(
-      // appBar: AppBar(
-      //   actions: [
-      //     IconButton(
-      //         onPressed: () {
-      //           setState(() {
-      //             isListView = !isListView;
-      //           });
-      //         },
-      //         icon: Icon(isListView ? Icons.grid_view : Icons.list))
-      //   ],
-      // ),
-      floatingActionButton: IconButton(
-        onPressed: () {
-          setState(() {
-            showListView = !showListView;
-          });
-        },
-        icon: Icon(showListView ? Icons.grid_view : Icons.list),
-        color: Colors.white,
-      ),
-      body: Center(
-        child: Container(
-            decoration: const BoxDecoration(
-                gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
-              colors: [
-                Colors.blue,
-                Colors.teal,
-              ],
-            )),
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            IconButton(
+                onPressed: () {
+                  setState(() {
+                    showListView = !showListView;
+                  });
+                },
+                icon: Icon(showListView ? Icons.grid_view : Icons.list))
+          ],
+        ),
+        Expanded(
             child: showListView
                 ? buildListView(galleryItems)
-                : buildGridView(galleryItems)),
-      ),
-
-      //backgroundColor: Colors.blue,
+                : buildGridView(galleryItems))
+      ],
     );
+    // return Scaffold(
+    //   // appBar: AppBar(
+    //   //   actions: [
+    //   //     IconButton(
+    //   //         onPressed: () {
+    //   //           setState(() {
+    //   //             isListView = !isListView;
+    //   //           });
+    //   //         },
+    //   //         icon: Icon(isListView ? Icons.grid_view : Icons.list))
+    //   //   ],
+    //   // ),
+    //   floatingActionButton: IconButton(
+    //     onPressed: () {
+    //       setState(() {
+    //         showListView = !showListView;
+    //       });
+    //     },
+    //     icon: Icon(showListView ? Icons.grid_view : Icons.list),
+    //     color: Colors.white,
+    //   ),
+    //   body: Center(
+    //     child: Container(
+    //         decoration: const BoxDecoration(
+    //             gradient: LinearGradient(
+    //           begin: Alignment.topRight,
+    //           end: Alignment.bottomLeft,
+    //           colors: [
+    //             Colors.blue,
+    //             Colors.teal,
+    //           ],
+    //         )),
+    //         child: showListView
+    //             ? buildListView(galleryItems)
+    //             : buildGridView(galleryItems)),
+    //   ),
+    //);
+
+    //Nicht auskommentieren
+    //backgroundColor: Colors.blue,
   }
 }
 

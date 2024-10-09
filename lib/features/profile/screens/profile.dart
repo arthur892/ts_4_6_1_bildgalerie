@@ -16,10 +16,10 @@ class Profile extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 150,
-              width: 150,
+              height: 250,
+              width: 250,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
+                  borderRadius: BorderRadius.circular(125),
                   image: DecorationImage(
                       image: AssetImage(profileItem.profileImagePath),
                       fit: BoxFit.cover)),
