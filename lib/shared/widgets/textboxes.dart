@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class TextRounded extends StatelessWidget {
-  TextRounded(
+  const TextRounded(
       {super.key,
       required this.text,
       this.color = const Color.fromRGBO(44, 62, 80, 0.6),
       this.textColor = Colors.white});
   final String text;
-  Color color;
-  Color textColor;
+  final Color color;
+  final Color textColor;
 
   @override
   Widget build(BuildContext context) {
