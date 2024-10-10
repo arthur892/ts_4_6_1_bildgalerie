@@ -14,7 +14,7 @@ Diese Flutter-basierte Galerie-App wurde im Rahmen einer 9 Monatigen Schulung en
 
 ## Entwicklungsprozess
 
-Die App wurde innerhalb von **2 Tagen** während einer Schulung entwickelt. Als Grundlage diente eine Vorlage (siehe unten), die die Struktur der App vorgab.
+Die App wurde innerhalb von **2 Tagen im Oktober 2024** während einer Schulung entwickelt. Als Grundlage diente eine Vorlage, die die Struktur der App vorgab.
 
 ![Anforderungen](https://github.com/arthur892/ts_4_6_1_bildgalerie/blob/main/screenshots/anforderung.png)
 
