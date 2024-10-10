@@ -41,9 +41,7 @@ Um die App lokal auszuführen, folge diesen Schritten:
    ```bash
    flutter pub get
    flutter run
-
-
-
+   
 <p align="center">
 Made with :heart: in Germany
 </p>
