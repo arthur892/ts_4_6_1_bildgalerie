@@ -10,41 +10,39 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final profileItem = profileRepo.getProfileItem();
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
-      child: Center(
-        child: Column(
-          children: [
-            Container(
-              height: 250,
-              width: 250,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(125),
-                  image: DecorationImage(
-                      image: AssetImage(profileItem.profileImagePath),
-                      fit: BoxFit.cover)),
-            ),
-            const SizedBox(
-              height: 8,
-            ),
-            Text(
-              profileItem.profileName,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-            ),
-            const SizedBox(
-              height: 4,
-            ),
-            Text(profileItem.profileJob,
-                style: TextStyle(fontWeight: FontWeight.bold)),
-            const SizedBox(
-              height: 16,
-            ),
-            Expanded(
-              child: SingleChildScrollView(
-                child: TextRounded(text: profileItem.profileDescription),
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Center(
+          child: Column(
+            children: [
+              Container(
+                height: 250,
+                width: 250,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(125),
+                    image: DecorationImage(
+                        image: AssetImage(profileItem.profileImagePath),
+                        fit: BoxFit.cover)),
               ),
-            ),
-          ],
+              const SizedBox(
+                height: 8,
+              ),
+              Text(
+                profileItem.profileName,
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              ),
+              const SizedBox(
+                height: 4,
+              ),
+              Text(profileItem.profileJob,
+                  style: TextStyle(fontWeight: FontWeight.bold)),
+              const SizedBox(
+                height: 16,
+              ),
+              TextRounded(text: profileItem.profileDescription),
+            ],
+          ),
         ),
       ),
     );
