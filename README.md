@@ -26,10 +26,7 @@ Die App wurde innerhalb von **2 Tagen im Oktober 2024** während einer Schulung 
 
 ## Screenshots
 
-<img src= "https://github.com/arthur892/ts_4_6_1_bildgalerie/blob/main/screenshots/gridview.png" height ="400">
-<img src= "https://github.com/arthur892/ts_4_6_1_bildgalerie/blob/main/screenshots/listview.png" height ="400">
-<img src= "https://github.com/arthur892/ts_4_6_1_bildgalerie/blob/main/screenshots/details.png" height ="400">
-<img src= "https://github.com/arthur892/ts_4_6_1_bildgalerie/blob/main/screenshots/profile.png" height ="400">
+<img src= "https://github.com/arthur892/ts_4_6_1_bildgalerie/blob/main/screenshots/gridview.png" height ="400"><img src= "https://github.com/arthur892/ts_4_6_1_bildgalerie/blob/main/screenshots/listview.png" height ="400"><img src= "https://github.com/arthur892/ts_4_6_1_bildgalerie/blob/main/screenshots/details.png" height ="400"><img src= "https://github.com/arthur892/ts_4_6_1_bildgalerie/blob/main/screenshots/profile.png" height ="400">
 
 ## Installation und Ausführung
 
